@@ -1,0 +1,52 @@
+﻿;;;;;;;;;;;;;;;;;;Totalizadores;;;;;;;;;;;;;;;
+Chamado;Operação;Grupo;Sub-grupo;Categorização;Tipificação;Recurso;Severidade;Status;Tecnologia;data abertura;data fechamento;Fechado? S/N;contagem/sla;meta sla;Índice meta/SLA;contagem/SLA - Horas;;Recurso;custo/h;venda/hh;venda/hh liq;margem;Planejado;Realizado;Faturamento bruto;Faturamento Planejado;bruto/plan;valor;Chamados Encerrados;Chamados encerrados em horas;Valor/colaborador;hr chamado/hr estimada;hr chamado/hrs apontadas
+0001;Digital;Vendas;Pré-Vendas;Propostas;Requisição;José da Silva;baixo;Fechado;Cloud;11/8/19 13:00;15/8/19 14:20;S;4,0556;5;123%;32;;José da Silva;R$ 70,00;R$ 130,17;R$ 101,53;31,05%;168;152;R$ 19.785,08;R$ 21.867,72;10%;R$ 1.884,29;4;160,44;R$ 20.884,25;96%;95%
+0002;Porto Seguro;TI;Analista TI;Operacional;Chamado;Maria Ribeiro;médio;Fechado;Middleware;11/7/19 12:00;20/7/19 11:00;S;8,9583;3;33%;72;;Maria Ribeiro;R$ 65,00;R$ 120,87;R$ 94,28;31,05%;168;148;R$ 17.888,39;R$ 20.305,74;12%;R$ 2.129,57;6;856,38;R$ 103.508,91;510%;579%
+0003;Porto Seguro;TI;Analista TI;Operacional;Incidente;Maria Ribeiro;médio;Aberto;Middleware;9/12/19 9:00;17/1/20 0:00;N;38,6250;3;8%;309;;João Silvestre;R$ 75,00;R$ 139,46;R$ 108,78;31,05%;168;179;R$ 24.963,79;R$ 23.429,70;-7%;-R$ 1.634,53;6;472,00;R$ 65.826,30;281%;264%
+0004;Porto Seguro;TI;Analista TI;Operacional;Incidente;Maria Ribeiro;médio;Fechado;Middleware;1/9/19 9:11;3/9/19 11:00;S;2,0757;3;145%;17;;Ricardo Martins;R$ 72,00;R$ 133,88;R$ 104,43;31,05%;168;185;R$ 24.768,54;R$ 22.492,51;-10%;-R$ 2.506,34;7;368,00;R$ 49.269,31;219%;199%
+0005;Porto Seguro;TI;Analista TI;Operacional;Chamado;Maria Ribeiro;baixo;Fechado;Middleware;30/8/19 8:00;5/9/19 8:20;S;6,0139;5;83%;48;;Silvia da Costa;R$ 62,00;R$ 115,29;R$ 89,93;31,05%;168;168;R$ 19.368,55;R$ 19.368,55;0%;R$ 0,00;8;1120,00;R$ 129.123,68;667%;667%
+0006;Porto Seguro;TI;Analista TI;Operacional;Chamado;Maria Ribeiro;baixo;Fechado;Middleware;30/8/19 0:00;5/9/19 0:00;S;6,0000;5;83%;48;;Mariana Silveira;R$ 78,00;R$ 145,04;R$ 113,13;31,05%;168;168;R$ 24.366,89;R$ 24.366,89;0%;R$ 0,00;3;280,00;R$ 40.611,48;167%;167%
+0007;Mapfre;TI;Analista TI;Desenvolvimento;Requisição;João Silvestre;baixo;Aberto;Cloud;8/11/19 0:00;17/1/20 0:00;N;70,0000;5;7%;560;;;;;;;;;;;;;;;;;
+0008;DSF;TI;Analista TI;Operacional;Chamado;Ricardo Martins;baixo;Fechado;Redes;7/9/19 0:00;9/9/19 0:00;S;2,0000;5;250%;16;;;;;;;;;;;;;;;;;
+0009;Union;RH;Analista RH;Contratações;Requisição;Silvia da Costa;médio;Fechado;Middleware;27/8/19 0:00;1/9/19 0:00;S;5,0000;3;60%;40;;;;;;;;;;;;;;;;;
+0010;Elo;TI;Analista TI;Operacional;Chamado;Mariana Silveira;médio;Fechado;Redes;12/8/19 0:00;15/8/19 0:00;S;3,0000;3;100%;24;;;;;;;;;;;;;;;;;
+0011;Porto Seguro;TI;Analista TI;Operacional;Chamado;Maria Ribeiro;médio;Fechado;Middleware;27/8/19 0:00;1/9/19 0:00;S;5,0000;3;60%;40;;;;;;;;;;;;;;;;;
+0012;Porto Seguro;TI;Analista TI;Operacional;Chamado;Maria Ribeiro;médio;Aberto;Middleware;30/10/19 0:00;17/1/20 0:00;S;79,0000;3;4%;632;;;;;;;;;;;;;;;;;
+0013;Union;RH;Analista RH;Contratações;Requisição;Silvia da Costa;médio;Fechado;Middleware;30/8/19 0:00;5/9/19 0:00;S;6,0000;3;50%;48;;;;;;;;;;;;;;;;;
+0014;Mapfre;TI;Analista TI;Desenvolvimento;Requisição;João Silvestre;médio;Aberto;Cloud;1/1/20 0:00;17/1/20 0:00;S;16,0000;3;19%;128;;;;;;;;;;;;;;;;;
+0015;Mapfre;TI;Analista TI;Desenvolvimento;Requisição;João Silvestre;alto;Aberto;Cloud;3/1/20 0:00;17/1/20 0:00;S;14,0000;1;7%;112;;;;;;;;;;;;;;;;;
+0016;Union;RH;Analista RH;Contratações;Requisição;Silvia da Costa;alto;Fechado;Middleware;7/9/19 0:00;9/9/19 0:00;S;2,0000;1;50%;16;;;;;;;;;;;;;;;;;
+0017;Digital;Vendas;Pré-Vendas;Propostas;Requisição;José da Silva;alto;Aberto;Automação;5/1/20 0:00;17/1/20 0:00;S;12,0000;1;8%;96;;;;;;;;;;;;;;;;;
+0018;Digital;Vendas;Pré-Vendas;Propostas;Requisição;José da Silva;baixo;Fechado;Data/AI;7/9/19 0:00;9/9/19 0:00;S;2,0000;5;250%;16;;;;;;;;;;;;;;;;;
+0019;Digital;Vendas;Pré-Vendas;Propostas;Requisição;José da Silva;baixo;Fechado;Automação;7/9/19 0:00;9/9/19 0:00;S;2,0000;5;250%;16;;;;;;;;;;;;;;;;;
+0020;Elo;TI;Analista TI;Operacional;Chamado;Mariana Silveira;baixo;Fechado;Redes;9/9/19 0:00;17/1/20 0:00;N;130,0000;5;4%;1040;;;;;;;;;;;;;;;;;
+0021;Elo;TI;Analista TI;Operacional;Chamado;Mariana Silveira;baixo;Fechado;Redes;8/9/19 0:00;17/1/20 0:00;N;131,0000;5;4%;1048;;;;;;;;;;;;;;;;;
+0022;Elo;TI;Analista TI;Operacional;Incidente;Mariana Silveira;alto;Fechado;Redes;8/9/19 0:00;17/1/20 0:00;N;131,0000;1;1%;1048;;;;;;;;;;;;;;;;;
+0023;Elo;TI;Analista TI;Operacional;Incidente;Mariana Silveira;alto;Fechado;Redes;8/9/19 0:00;17/1/20 0:00;N;131,0000;1;1%;1048;;;;;;;;;;;;;;;;;
+0024;Elo;TI;Analista TI;Operacional;Chamado;Mariana Silveira;alto;Aberto;Redes;2/1/20 0:00;17/1/20 0:00;N;15,0000;1;7%;120;;;;;;;;;;;;;;;;;
+0025;Mapfre;TI;Analista TI;Desenvolvimento;Requisição;João Silvestre;médio;Aberto;Cloud;5/1/20 0:00;17/1/20 0:00;S;12,0000;3;25%;96;;;;;;;;;;;;;;;;;
+0026;Mapfre;TI;Analista TI;Desenvolvimento;Requisição;João Silvestre;médio;Fechado;Cloud;30/8/19 0:00;5/9/19 0:00;S;6,0000;3;50%;48;;;;;;;;;;;;;;;;;
+0027;Elo;TI;Analista TI;Operacional;Chamado;Mariana Silveira;médio;Aberto;Redes;1/1/20 0:00;17/1/20 0:00;S;16,0000;3;19%;128;;;;;;;;;;;;;;;;;
+0028;Elo;TI;Analista TI;Operacional;Incidente;Mariana Silveira;médio;Aberto;Redes;1/1/20 0:00;17/1/20 0:00;S;16,0000;3;19%;128;;;;;;;;;;;;;;;;;
+0029;Union;RH;Analista RH;Contratações;Requisição;Silvia da Costa;baixo;Fechado;Middleware;27/8/19 0:00;1/9/19 0:00;S;5,0000;5;100%;40;;;;;;;;;;;;;;;;;
+0030;Union;RH;Analista RH;Contratações;Requisição;Silvia da Costa;baixo;Fechado;Cloud;30/8/19 0:00;5/9/19 0:00;S;6,0000;5;83%;48;;;;;;;;;;;;;;;;;
+0031;Union;RH;Analista RH;Contratações;Requisição;Silvia da Costa;baixo;Aberto;Cloud;7/1/20 0:00;17/1/20 0:00;S;10,0000;5;50%;80;;;;;;;;;;;;;;;;;
+0032;Digital;Vendas;Pré-Vendas;Propostas;Requisição;José da Silva;baixo;Fechado;Automação;8/9/19 0:00;17/1/20 0:00;N;131,0000;5;4%;1048;;;;;;;;;;;;;;;;;
+0033;Digital;Vendas;Pré-Vendas;Propostas;Requisição;José da Silva;baixo;Aberto;Data/AI;8/11/19 0:00;17/1/20 0:00;N;70,0000;5;7%;560;;;;;;;;;;;;;;;;;
+0034;Digital;Vendas;Pré-Vendas;Propostas;Requisição;José da Silva;baixo;Aberto;Cloud;8/11/19 0:00;17/1/20 0:00;N;70,0000;5;7%;560;;;;;;;;;;;;;;;;;
+0035;DSF;TI;Analista TI;Operacional;Incidente;Ricardo Martins;baixo;Fechado;Redes;27/8/19 0:00;1/9/19 0:00;S;5,0000;5;100%;40;;;;;;;;;;;;;;;;;
+0036;DSF;TI;Analista TI;Operacional;Incidente;Ricardo Martins;baixo;Fechado;Redes;30/8/19 0:00;5/9/19 0:00;S;6,0000;5;83%;48;;;;;;;;;;;;;;;;;
+0037;DSF;TI;Analista TI;Operacional;Chamado;Ricardo Martins;Alto;Fechado;Redes;27/8/19 0:00;1/9/19 0:00;S;5,0000;1;20%;40;;;;;;;;;;;;;;;;;
+0038;DSF;TI;Analista TI;Operacional;Chamado;Ricardo Martins;médio;Fechado;Redes;12/8/19 0:00;14/8/19 0:00;S;2,0000;3;150%;16;;;;;;;;;;;;;;;;;
+0039;DSF;TI;Analista TI;Operacional;Incidente;Ricardo Martins;baixo;Fechado;Redes;27/8/19 0:00;1/9/19 0:00;S;5,0000;5;100%;40;;;;;;;;;;;;;;;;;
+0040;Mapfre;TI;Analista TI;Desenvolvimento;Requisição;João Silvestre;baixo;Fechado;Cloud;27/8/19 0:00;1/9/19 0:00;S;5,0000;5;100%;40;;;;;;;;;;;;;;;;;
+0041;Mapfre;TI;Analista TI;Desenvolvimento;Requisição;João Silvestre;alto;Fechado;Cloud;30/8/19 0:00;5/9/19 0:00;S;6,0000;1;17%;48;;;;;;;;;;;;;;;;;
+0042;Union;RH;Analista RH;Contratações;Requisição;Silvia da Costa;alto;Aberto;Cloud;8/11/19 0:00;17/1/20 0:00;S;70,0000;1;1%;560;;;;;;;;;;;;;;;;;
+0043;Union;RH;Analista RH;Contratações;Requisição;Silvia da Costa;alto;Aberto;Data/AI;12/12/19 0:00;17/1/20 0:00;S;36,0000;1;3%;288;;;;;;;;;;;;;;;;;
+0044;DSF;TI;Analista TI;Operacional;Incidente;Ricardo Martins;baixo;Aberto;Redes;27/12/19 0:00;17/1/20 0:00;S;21,0000;5;24%;168;;;;;;;;;;;;;;;;;
+0045;DSF;TI;Analista TI;Operacional;Incidente;Ricardo Martins;baixo;Aberto;Redes;2/1/20 0:00;17/1/20 0:00;N;15,0000;5;33%;120;;;;;;;;;;;;;;;;;
+0046;DSF;TI;Analista TI;Operacional;Chamado;Ricardo Martins;baixo;Aberto;Redes;2/1/20 0:00;17/1/20 0:00;N;15,0000;5;33%;120;;;;;;;;;;;;;;;;;
+0047;Elo;TI;Analista TI;Operacional;Chamado;Mariana Silveira;baixo;Fechado;Redes;8/9/19 0:00;17/1/20 0:00;N;131,0000;5;4%;1048;;;;;;;;;;;;;;;;;
+0048;Porto Seguro;TI;Analista TI;Operacional;Chamado;Maria Ribeiro;baixo;Aberto;Middleware;2/1/20 0:00;17/1/20 0:00;N;15,0000;5;33%;120;;;;;;;;;;;;;;;;;
+0049;Porto Seguro;TI;Analista TI;Operacional;Chamado;Maria Ribeiro;baixo;Aberto;Middleware;2/1/20 0:00;17/1/20 0:00;N;15,0000;5;33%;120;;;;;;;;;;;;;;;;;
+0050;Elo;TI;Analista TI;Operacional;Chamado;Mariana Silveira;baixo;Fechado;Redes;8/9/19 0:00;17/1/20 0:00;N;131,0000;5;4%;1048;;;;;;;;;;;;;;;;;
