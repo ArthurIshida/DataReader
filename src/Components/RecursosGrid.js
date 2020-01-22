@@ -6,8 +6,8 @@ import ScrollUpButton from 'react-scroll-up-button';
 import { useStyles } from './Styles';
 
 
-export default function FilesGrid(){
-	const [file, setFile] = useState([]);
+export default function RecursosGrid(){
+	const [recurso, setRecurso] = useState([]);
 	const [query, setQuery] = useState([]);
 	const classes = useStyles();
 
@@ -15,16 +15,17 @@ export default function FilesGrid(){
 
 	useEffect(() => {
 		const fetchData = async() => {
-			const res = await fetch('/api/files');
+			const res = await fetch('/api/recurso');
 			const body = await res.json();
-			setFile(body)
+			console.log(body)
+			setRecurso(body)
 		};
 		fetchData();
 	}, [query]);
 
 	const remove = (id) => {
 		return(
-			fetch(`api/files/${id}`, {
+			fetch(`api/recurso/${id}`, {
 				method: 'DELETE',
 			    headers: {
 			     'Accept': 'application/json',
@@ -32,8 +33,8 @@ export default function FilesGrid(){
 	      		}
 			}).then(() => {
 	
-		    let updatedFiles = file.filter(file => file.id !== id);
-		    setFile(updatedFiles);
+		    let updatedRecurso = recurso.filter(data => data.id !== id);
+		    setRecurso(updatedRecurso);
 		    setQuery(!query);
 			})
 		)
@@ -47,18 +48,30 @@ export default function FilesGrid(){
 		)
 	}
 
-	const groupList = file.map(file => {
+	const groupList = recurso.map(recurso => {
 		return([
-			file.id,
-			file.name,
-			file.creationDateTime,
-			file.location
+			recurso.nome,
+			recurso.custoHora,
+			recurso.vendaHora,
+			recurso.vendaHoraLiq,
+			recurso.margem,
+			recurso.chamadosPlanejados,
+			recurso.chamadosRealizados,
+			recurso.faturamentoBruto,
+			recurso.faturamentoRealizado,
+			recurso.brutoPlan,
+			recurso.valor,
+			recurso.chamadosEncerrados,
+			recurso.chamadosEncerradosHora,
+			recurso.valorColaborador,
+			recurso.horaChamadoHoraEstimada,
+			recurso.horaChamadoHoraApontada,
 	    ])
 	})
 
 	const options = {
 		onRowsDelete: (rowsDeleted) => {
-			const idDelete = rowsDeleted.data.map(row => file[row.dataIndex].id);
+			const idDelete = rowsDeleted.data.map(row => recurso[row.dataIndex].id);
 			remove(idDelete);
 		},
 		pagination: false,
@@ -82,8 +95,12 @@ export default function FilesGrid(){
 
 	return(
 		<MuiThemeProvider theme={getMuiTheme} >
-			<MUIDataTable title={type("Lista de Arquivos Entregues")}
-				columns={["ID", "Name", "Creation Date", "Location" ]}
+			<MUIDataTable title={type("Lista de Recursos")}
+				columns={["Nome", "Custo/Hora", "Venda/Hora", "Venda/Hora Liq", "Margem", "Chamados Planejados", "Chamados Realizados",
+					"Faturamento Bruto", "Faturamento Planejado", "Bruto/Planejado", "Valor", "Chamados Encerrados", 
+					"Chamados Encerrados em Hora", "Valor/Colaborador",
+					"Hora Chamado/ Hora Estimada", "Hora Chamado/ Hora Apontada"
+				]}
 				data={groupList} options={options}
 			/>
 			<ScrollUpButton />

@@ -35,6 +35,20 @@ export default withRouter(function UploadFile(props){
 		            console.log("Res Data: " + res.data);
 		            console.log("File uploaded successfully.");
 		        }
+		        if(res.status === 417){
+		        	return(
+		        		<Typography className={classes.textTitle}>
+		        			Value of columns does not match requirements
+		        		</Typography>
+		        	)
+		        }
+		        if(res.status === 411){
+		        	return(
+		        		<Typography className={classes.textTitle}>
+		        			Number of columns does not match requirements
+		        		</Typography>		
+		        	)
+		        }
 		    });
 		}
 	};

@@ -1,7 +1,5 @@
 package com.uniondigital.demo.auto.model;
 
-import java.time.LocalDateTime;
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -20,9 +18,10 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 public class Chamado {
 	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
+	@NonNull
 	@ManyToOne
-	@JoinColumn(name = "originFile_id", nullable = false)
-	private UploadedFiles originFile;
+	@JoinColumn(name = "originFileChamado_id", nullable = false)
+	private UploadedFiles originFileChamado;
 	@NonNull
 	private Long numChamado;
 	@NonNull
@@ -52,7 +51,7 @@ public class Chamado {
 	@NonNull
 	private int metaSla;
 	@NonNull
-	private double indiceMetaSla;
+	private int indiceMetaSla;
 	@NonNull
 	private int contagemSlaHora;
 
@@ -60,11 +59,11 @@ public class Chamado {
 	public Long getId() {
 		return id;
 	}
-	public UploadedFiles getOriginFile() {
-		return originFile;
+	public UploadedFiles getOriginFileChamado() {
+		return originFileChamado;
 	}
-	public void setOriginFile(UploadedFiles originFile) {
-		this.originFile = originFile;
+	public void setOriginFileChamado(UploadedFiles originFile) {
+		this.originFileChamado = originFile;
 	}
 	public Long getNumChamado() {
 		return numChamado;
@@ -156,10 +155,10 @@ public class Chamado {
 	public void setMetaSla(int metaSla) {
 		this.metaSla = metaSla;
 	}
-	public double getIndiceMetaSla() {
+	public int getIndiceMetaSla() {
 		return indiceMetaSla;
 	}
-	public void setIndiceMetaSla(double indiceMetaSla) {
+	public void setIndiceMetaSla(int indiceMetaSla) {
 		this.indiceMetaSla = indiceMetaSla;
 	}
 	public int getContagemSlaHora() {

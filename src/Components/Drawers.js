@@ -18,24 +18,29 @@ export default function Drawers(props) {
 
         <ClickAwayListener onClickAway={() => props.toggleDrawer(false)} >
           <ButtonGroup className={classes.buttonGroup}>
-              <Link to="/chamados/dash" style={{textDecoration: "none"}}>
-                <Button className={classes.textTitle} variant="text" fullWidth >
-                  Chamado Dashboard
-                </Button>
-              </Link>
-              <Link to="/files/dash" style={{textDecoration: "none"}}>
-                <Button className={classes.textTitle} variant="text" fullWidth >
-                  Files Dashboard
-                </Button>
-              </Link>
               <Link to="/upload" style={{textDecoration: "none"}} >
                 <Button className={classes.textTitle} variant="text" fullWidth >
-                  Upload File
+                  Upload de Arquivo
+                </Button>
+              </Link>
+              <Link to="/chamados/dashboard" style={{textDecoration: "none"}}>
+                <Button className={classes.textTitle} variant="text" fullWidth >
+                  Chamados
+                </Button>
+              </Link>
+              <Link to="/recursos/dashboard" style={{textDecoration: "none"}}>
+                <Button className={classes.textTitle} variant="text" fullWidth >
+                  Recursos
+                </Button>
+              </Link>
+              <Link to="/files/dashboard" style={{textDecoration: "none"}}>
+                <Button className={classes.textTitle} variant="text" fullWidth >
+                  Arquivos
                 </Button>
               </Link>
               <Link to="/graph" style={{textDecoration: "none"}} >
                 <Button className={classes.textTitle} variant="text" fullWidth >
-                  Graphics
+                  Gráficos
                 </Button>
               </Link>
           </ButtonGroup>

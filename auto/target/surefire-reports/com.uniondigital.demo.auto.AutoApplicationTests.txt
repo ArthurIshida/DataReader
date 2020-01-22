@@ -1,11 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.uniondigital.demo.auto.AutoApplicationTests
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 79.507 s <<< FAILURE! - in com.uniondigital.demo.auto.AutoApplicationTests
-contextLoads  Time elapsed: 0.006 s  <<< ERROR!
-java.lang.IllegalStateException: Failed to load ApplicationContext
-Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'initializer' defined in file [C:\Users\arthur\Documents\Projects\Testes\Auto\auto\target\classes\com\uniondigital\demo\auto\Initializer.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'chamadoRepository': Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Failed to create query for method public abstract com.uniondigital.demo.auto.model.Chamado com.uniondigital.demo.auto.model.ChamadoRepository.findByStatus(java.lang.String)! No property status found for type Chamado!
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'chamadoRepository': Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Failed to create query for method public abstract com.uniondigital.demo.auto.model.Chamado com.uniondigital.demo.auto.model.ChamadoRepository.findByStatus(java.lang.String)! No property status found for type Chamado!
-Caused by: java.lang.IllegalArgumentException: Failed to create query for method public abstract com.uniondigital.demo.auto.model.Chamado com.uniondigital.demo.auto.model.ChamadoRepository.findByStatus(java.lang.String)! No property status found for type Chamado!
-Caused by: org.springframework.data.mapping.PropertyReferenceException: No property status found for type Chamado!
-
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 49.885 s - in com.uniondigital.demo.auto.AutoApplicationTests

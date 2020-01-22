@@ -5,6 +5,7 @@ import Drawers from './Drawers';
 import GraphPage from './Pages/GraphPage';
 import ChamadosDashboard from './Pages/ChamadosDashboard';
 import FilesDashboard from './Pages/FilesDashboard';
+import RecursosDashboard from './Pages/RecursosDashboard';
 import UploadPage from './Pages/UploadPage';
 import HomePage from './Pages/HomePage';
 
@@ -23,8 +24,9 @@ export default function App(){
 	return(
 		<Router>
 			<Switch>
-				<Route exact path='/chamados/dash' component={ChamadosDashboard} />
-				<Route exact path='/files/dash' component={FilesDashboard} />
+				<Route exact path='/chamados/dashboard' component={ChamadosDashboard} />
+				<Route exact path='/files/dashboard' component={FilesDashboard} />
+				<Route exact path='/recursos/dashboard' component={RecursosDashboard} />
 				<Route exact path='/' component={HomePage} />
 				<Route exact path='/upload' component={UploadPage} />
 				<Route exact path='/graph' component={GraphPage} />

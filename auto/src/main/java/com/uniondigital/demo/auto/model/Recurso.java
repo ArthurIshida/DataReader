@@ -1,14 +1,11 @@
 package com.uniondigital.demo.auto.model;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 import org.springframework.lang.NonNull;
@@ -18,6 +15,9 @@ import org.springframework.lang.NonNull;
 public class Recurso {
 	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
+	@ManyToOne
+	@JoinColumn(name = "originFileRecurso_id", nullable = false)
+	private UploadedFiles originFileRecurso;
 	@NonNull
 	private String nome;
 	@NonNull
@@ -25,7 +25,7 @@ public class Recurso {
 	@NonNull
 	private double vendaHora;
 	@NonNull
-	private double vendaHhLiq;
+	private double vendaHoraLiq;
 	@NonNull
 	private double margem;
 	@NonNull
@@ -47,10 +47,16 @@ public class Recurso {
 	@NonNull
 	private double valorColaborador;
 	@NonNull
-	private double horaChamadoEstimada;
+	private double horaChamadoHoraEstimada;
 	@NonNull
-	private double horaChamadoApontada;
+	private double horaChamadoHoraApontada;
 	
+	public UploadedFiles getOriginFileRecurso() {
+		return originFileRecurso;
+	}
+	public void setOriginFileRecurso(UploadedFiles originFileRecurso) {
+		this.originFileRecurso = originFileRecurso;
+	}
 	public String getNome() {
 		return nome;
 	}
@@ -69,11 +75,11 @@ public class Recurso {
 	public void setVendaHora(double vendaHora) {
 		this.vendaHora = vendaHora;
 	}
-	public double getVendaHhLiq() {
-		return vendaHhLiq;
+	public double getVendaHoraLiq() {
+		return vendaHoraLiq;
 	}
-	public void setVendaHhLiq(double vendaHhLiq) {
-		this.vendaHhLiq = vendaHhLiq;
+	public void setVendaHoraLiq(double vendaHoraLiq) {
+		this.vendaHoraLiq = vendaHoraLiq;
 	}
 	public double getMargem() {
 		return margem;
@@ -81,17 +87,17 @@ public class Recurso {
 	public void setMargem(double margem) {
 		this.margem = margem;
 	}
-	public int getPlanejado() {
+	public int getChamadosPlanejados() {
 		return chamadosPlanejados;
 	}
-	public void setPlanejado(int planejado) {
-		this.chamadosPlanejados= planejado;
+	public void setChamadosPlanejados(int chamadosPlanejados) {
+		this.chamadosPlanejados = chamadosPlanejados;
 	}
-	public int getRealizado() {
+	public int getChamadosRealizados() {
 		return chamadosRealizados;
 	}
-	public void setRealizado(int realizado) {
-		this.chamadosRealizados = realizado;
+	public void setChamadosRealizados(int chamadosRealizados) {
+		this.chamadosRealizados = chamadosRealizados;
 	}
 	public double getFaturamentoBruto() {
 		return faturamentoBruto;
@@ -129,23 +135,23 @@ public class Recurso {
 	public void setChamadosEncerradosHora(double chamadosEncerradosHora) {
 		this.chamadosEncerradosHora = chamadosEncerradosHora;
 	}
-	public double getValorColaborado() {
+	public double getValorColaborador() {
 		return valorColaborador;
 	}
-	public void setValorColaborado(double valorColaborado) {
-		this.valorColaborador = valorColaborado;
+	public void setValorColaborador(double valorColaborador) {
+		this.valorColaborador = valorColaborador;
 	}
-	public double getHoraChamadoPorHoraEstimada() {
-		return horaChamadoEstimada;
+	public double getHoraChamadoHoraEstimada() {
+		return horaChamadoHoraEstimada;
 	}
-	public void setHoraChamadoPorHoraEstimada(double horaChamadoPorHoraEstimada) {
-		this.horaChamadoEstimada = horaChamadoPorHoraEstimada;
+	public void setHoraChamadoHoraEstimada(double horaChamadoEstimada) {
+		this.horaChamadoHoraEstimada = horaChamadoEstimada;
 	}
-	public double getHoraChamadoPorHoraApontada() {
-		return horaChamadoApontada;
+	public double getHoraChamadoHoraApontada() {
+		return horaChamadoHoraApontada;
 	}
-	public void setHoraChamadoPorHoraApontada(double horaChamadoPorHoraApontada) {
-		this.horaChamadoApontada = horaChamadoPorHoraApontada;
+	public void setHoraChamadoHoraApontada(double horaChamadoApontada) {
+		this.horaChamadoHoraApontada = horaChamadoApontada;
 	}
 	public Long getId() {
 		return id;

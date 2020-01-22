@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Typography } from '@material-ui/core';
 import { createMuiTheme, MuiThemeProvider } from '@material-ui/core/styles';
 import MUIDataTable from 'mui-datatables';
+import ScrollUpButton from 'react-scroll-up-button';
 import { useStyles } from './Styles';
 
 
@@ -49,7 +50,7 @@ export default function ChamadosGrid(){
 
 	const groupList = chamado.map(chamado => {
 		return([
-			chamado.id,
+			chamado.numChamado,
 			chamado.operacao,
 			chamado.grupo,
 			chamado.subGrupo,
@@ -95,14 +96,15 @@ export default function ChamadosGrid(){
 
 	return(
 		<MuiThemeProvider theme={getMuiTheme} >
-			<MUIDataTable title={type("Chamados List")}
+			<MUIDataTable title={type("Lista de Chamados")}
 				
-				columns={["ID", "Operação", "Grupo", "Sub-Grupo", "Categorização", "Tipificação", "Recurso",
+				columns={["N° do Chamado", "Operação", "Grupo", "Sub-Grupo", "Categorização", "Tipificação", "Recurso",
 					"Severidade", "Status", "Tecnologia", "Data de Abertura", "Data de Fechamento", "Fechado S/N", "Contagem/SLA",
 					"Meta SLA", "Índice Meta/Sla", "Contagem/SLA - Hora"
 				]}
 				data={groupList} options={options}
 			/>
+			<ScrollUpButton />
 		</MuiThemeProvider>
 	)
 }

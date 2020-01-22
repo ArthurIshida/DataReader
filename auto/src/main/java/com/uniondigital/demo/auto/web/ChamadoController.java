@@ -16,7 +16,6 @@ import java.util.Optional;
 @RestController
 @RequestMapping("/api")
 class ChamadoController {
-
     private final Logger log = LoggerFactory.getLogger(ChamadoController.class);
     @Autowired
 	private ChamadoRepository chamadoRepository;

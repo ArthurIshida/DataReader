@@ -1,10 +1,8 @@
 package com.uniondigital.demo.auto.model;
 
-import java.util.List;
 import java.util.Optional;
 
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.data.jpa.repository.Query;
 
 public interface ChamadoRepository extends JpaRepository<Chamado, Long>{
 	Chamado findByOperacao(String operacao);
@@ -16,8 +14,8 @@ public interface ChamadoRepository extends JpaRepository<Chamado, Long>{
 	Chamado findBySeveridade(String severidade);
 	Chamado findByStatusData(String statusData);
 	Chamado findByTecnologia(String tecnologia);
-	Chamado findByOriginFile(Optional<UploadedFiles> file);
-	@Query(nativeQuery = true, value = "SELECT status, dataAbertura, dataFechamento, recurso, operacao FROM Chamado"
+	Chamado findByOriginFileChamado(Optional<UploadedFiles> file);
+	/*@Query(nativeQuery = true, value = "SELECT status, dataAbertura, dataFechamento, recurso, operacao FROM Chamado"
 			+ "GROUP BY operacao")
 	List<Chamado> abertosFechadosOperacao();
 	
@@ -52,5 +50,5 @@ public interface ChamadoRepository extends JpaRepository<Chamado, Long>{
 	@Query(nativeQuery = true, value = "SELECT status, dataAbertura, dataFechamento, recurso, operacao,"
 			+ "	metaSla, contagemSla, tecnologia, count(id)"
 			+ "	FROM Chamado")
-	List<Chamado> abertoTecnologia();
+	List<Chamado> abertoTecnologia();*/
 }

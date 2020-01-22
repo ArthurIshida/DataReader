@@ -52,5 +52,15 @@ export const useStyles = makeStyles(theme => ({
     color: '#bdbdbd',
     outline: 'none',
     transition: 'border .24s ease-in-out'
-  }
+  },
+  fabGreen: {
+    position: 'absolute',
+    bottom: theme.spacing(2),
+    right: theme.spacing(2),
+    color: theme.palette.common.white,
+    backgroundColor: "#FAB240",
+    '&:hover': {
+      backgroundColor: "#FAB240",
+    },
+  },
 }));

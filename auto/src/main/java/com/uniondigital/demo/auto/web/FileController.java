@@ -19,21 +19,24 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 
-import com.uniondigital.demo.auto.model.Chamado;
+import com.uniondigital.demo.auto.config.FileService;
 import com.uniondigital.demo.auto.model.ChamadoRepository;
-import com.uniondigital.demo.auto.model.FilesRepository;
+import com.uniondigital.demo.auto.model.RecursoRepository;
+import com.uniondigital.demo.auto.model.UploadedFilesRepository;
 import com.uniondigital.demo.auto.model.UploadedFiles;
 
 @RestController
 @RequestMapping("/api")
-public class FileController {
+class FileController {
     private static final Logger log = LoggerFactory.getLogger(FileController.class);
     @Autowired
-    private FilesRepository filesRepository;
+    private UploadedFilesRepository filesRepository;
     @Autowired
     private ChamadoRepository chamadoRepository;
+    @Autowired
+    private RecursoRepository recursoRepository;
     
-    public FileController(FilesRepository filesRepository) {
+    public FileController(UploadedFilesRepository filesRepository) {
     	this.filesRepository = filesRepository;
     }
     
@@ -52,9 +55,8 @@ public class FileController {
 
     @PostMapping(value = "/files/upload", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
     public ResponseEntity<MultipartFile> uploadFile(@RequestParam(value = "files") MultipartFile file) throws Exception {
-        FileService fileService = new FileService(filesRepository, chamadoRepository);
+        FileService fileService = new FileService(filesRepository, chamadoRepository, recursoRepository);
     	fileService.readFile(file);
-    	log.info("Files uploaded");
         return ResponseEntity.ok().build();
     }
     

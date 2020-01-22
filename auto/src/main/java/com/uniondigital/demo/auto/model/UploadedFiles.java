@@ -16,16 +16,18 @@ import org.hibernate.annotations.CreationTimestamp;
 import org.springframework.lang.NonNull;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @Entity
 @Table(name = "files")
 public class UploadedFiles {
 	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	@OneToMany(mappedBy = "originFile", orphanRemoval = true, cascade = CascadeType.ALL)
+	@OneToMany(mappedBy = "originFileChamado", orphanRemoval = true, cascade = CascadeType.ALL)
 	@JsonIgnore
 	private List<Chamado> chamados = new ArrayList<Chamado>();
+	@OneToMany(mappedBy = "originFileRecurso", orphanRemoval = true, cascade = CascadeType.ALL)
+	@JsonIgnore
+	private List<Recurso> recursos = new ArrayList<Recurso>();
 	@NonNull
 	private String location = "upload-dir";
 	@NonNull
@@ -61,6 +63,11 @@ public class UploadedFiles {
 	
 	public void addChamado(Chamado chamado) {
 		this.chamados.add(chamado);
-		chamado.setOriginFile(this);
+		chamado.setOriginFileChamado(this);
+	}
+	
+	public void addRecurso(Recurso recurso) {
+		this.recursos.add(recurso);
+		recurso.setOriginFileRecurso(this);
 	}
 }
